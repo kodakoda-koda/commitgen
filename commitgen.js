@@ -58,11 +58,11 @@ if (language) {
 
       // No API key
     } else {
-      const reply =
+      const message =
         language === "ja"
           ? "APIキーが設定されていないため、サマリが生成できませんでした"
           : "The summary could not be generated because the API key is not set.";
-      console.log(reply);
+      throw new Error(message);
     }
 
     // No input
@@ -71,9 +71,9 @@ if (language) {
       language === "ja"
         ? "入力がありません。コードを入力してください。"
         : "There is no input. Please enter the code.";
-    console.log(reply);
+    throw new Error(reply);
   }
 } else {
   const reply = "No language specified. Please specify the language.";
-  console.log(reply);
+  throw new Error(reply);
 }
