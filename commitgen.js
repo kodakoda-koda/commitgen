@@ -60,8 +60,8 @@ if (language) {
     } else {
       const message =
         language === "ja"
-          ? "APIキーが設定されていないため、サマリが生成できませんでした"
-          : "The summary could not be generated because the API key is not set.";
+          ? "APIキーが設定されていません。"
+          : "API key is not set.";
       throw new Error(message);
     }
 
