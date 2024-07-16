@@ -58,7 +58,7 @@ Add alias below.
 
 ```
 [alias]
-	ccg = !git diff --staged | node {absolute path of the clone folder}/commitgen.js "{language code}" \"$(cat -)\" | xargs git commit -m
+	ccg = !git diff --staged | node {absolute path of the clone folder}/commitgen.js "{language code}" \"$(cat -)\" | xargs -I {} git commit -m \"'{}'\"
 	ccgtest = !git diff --staged | node {absolute path of the clone folder}/commitgen.js "{language code}" \"$(cat -)\"
 	acp = !git add -A && git ccg && git push origin $1 &&:
 ```
