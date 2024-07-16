@@ -23,6 +23,13 @@ if (user_prompt) {
   } else if (process.env.OPENAI_API_KEY) {
     const reply = await callChatGPT(system_prompt, user_prompt);
     console.log(reply);
+
+    // Google GEMINI
+  } else if (process.env.GOOGLE_API_KEY) {
+    const reply = await callGEMINI(system_prompt, user_prompt);
+    console.log(reply);
+
+    // No API key
   } else {
     console.log("キーが設定されていないためサマリが生成できませんでした");
   }
