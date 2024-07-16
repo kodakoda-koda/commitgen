@@ -73,6 +73,8 @@ if (language) {
         : "There is no input. Please enter the code.";
     throw new Error(reply);
   }
+
+  // No language
 } else {
   const reply = "No language specified. Please specify the language.";
   throw new Error(reply);
