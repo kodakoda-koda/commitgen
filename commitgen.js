@@ -66,6 +66,8 @@ if (language) {
           : "The summary could not be generated because the API key is not set.";
       console.log(reply);
     }
+
+    // No input
   } else {
     const reply =
       language === "ja"
