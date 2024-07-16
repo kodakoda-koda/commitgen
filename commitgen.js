@@ -21,8 +21,7 @@ const system_prompt =
     style: コードの意味に影響を与えない変更（空白、フォーマット、セミコロンの欠落など）
     refactor: 生産性を向上させるコード変更
     perf: パフォーマンスを向上させるコード変更
-    test: 不足しているテストを追加または既存のテストを修正
-    chore: ビルドプロセスまたはドキュメント生成などの補助ツールとしての変更`
+    test: 不足しているテストを追加または既存のテストを修正`
     : `You are a Git Commit Comment Generation Machine.
     Please generate a summary commit comment within 72 characters for the input diff-formatted code.
     Please make the English sentence as short as possible and generate only the commit comment.
@@ -34,8 +33,7 @@ const system_prompt =
     style: Changes that do not affect the meaning of the code (whitespace, formatting, missing semicolons, etc.)
     refactor: Code changes that improve productivity
     perf: Code changes that improve performance
-    test: Add missing tests or correct existing tests
-    chore: Changes as a supplementary tool such as build process or document generation`;
+    test: Add missing tests or correct existing tests`;
 
 if (language) {
   if (user_prompt) {
