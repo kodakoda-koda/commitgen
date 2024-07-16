@@ -18,8 +18,9 @@
   },
   "homepage": "https://github.com/shyamagu/commitgen#readme",
   "dependencies": {
+    "@google/generative-ai": "^0.15.0",
     "axios": "^1.3.5",
-    "dotenv": "^16.0.3",
+    "dotenv": "^16.4.5",
     "openai": "^3.2.1"
   }
 }
