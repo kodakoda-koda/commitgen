@@ -11,7 +11,7 @@ const user_prompt = process.argv[3];
 const system_prompt =
   language === "ja"
     ? "あなたはGit Commit コメント生成マシンです。入力されたdiff形式の差分コードに対して、72文字以内のサマリーコミットコメントを生成して下さい。可能な限り短い日本語の文章にし。コミットコメントのみ生成してください。コミットコメントのはじめは「fix: 」、「feat: 」、「docs: 」、「style: 」、「refactor: 」、「perf: 」、「test: 」、「chore: 」のいずれかで始めてください。"
-    : "You are a Git Commit Comment Generation Machine. Please generate a summary commit comment of up to 72 characters for the input diff-formatted code. Make it as short as possible and in Japanese. Please generate only the commit comment. Start the commit comment with one of the following: 'fix:', 'feat:', 'docs:', 'style:', 'refactor:', 'perf:', 'test:', or 'chore:'.";
+    : "You are a Git Commit Comment Generation Machine. Please generate a summary commit comment of up to 72 characters for the input diff-formatted code. Make it as short as possible and in English. Please generate only the commit comment. Start the commit comment with one of the following: 'fix:', 'feat:', 'docs:', 'style:', 'refactor:', 'perf:', 'test:', or 'chore:'.";
 
 if (language) {
   if (user_prompt) {
