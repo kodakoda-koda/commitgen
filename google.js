@@ -13,14 +13,8 @@ const generationConfig = {
 export async function callGEMINI(prompt, message) {
   const model = genAI.getGenerativeModel({
     model: "gemini-1.5-flash",
-    systemInstructions: prompt,
-    history: [],
   });
 
-  const completion = model.startChat({
-    generationConfig,
-  });
-
-  const result = await completion.sendMessage(message);
+  const result = await model.generateContent([prompt, message]);
   return result.response.text();
 }
