@@ -23,17 +23,26 @@ Especially for personal hobby projects, you may have experienced that commit com
    AOAI_MODEL={your Azure OpenAI Service's ChatGPT Model name}
    ```
 
+   - For Google AI Studio, specify the key in the .env file you created.
+
+   ```:.env
+   GOOGLE_API_KEY={your Google AI Studio API Key}
+   ```
+
 3. Try running a test. Run the following command to check if it works.
 
 ```
-node {absolute path of the clone folder}/commitgen.js "Updated test.js".
+node {absolute path of the clone folder}/commitgen.js "en" "Updated test.js".
 ```
+
+First argument is language code, second argument is the text you want to generate commit comment.
+Now, we are supporting "en" and "ja" for language code.
 
 4. Try to use on real project.
    After confirming that it works with an absolute path, move to your project that uses Git. After doing git add, run the following command.
 
 ```
-git commit -m "$(node {absolute path of the clone folder}/commitgen.js "$(git diff --staged)")"
+git commit -m "$(node {absolute path of the clone folder}/commitgen.js "{language code}" "$(git diff --staged | cat)")"
 ```
 
 5. Regist Github alias
@@ -49,8 +58,8 @@ Add alias below.
 
 ```
 [alias]
-	ccg = !git diff --staged | node {absolute path of the clone folder}/commitgen.js \"$(cat -)\" | xargs git commit -m
-	ccgtest = !git diff --staged | node {absolute path of the clone folder}/commitgen.js \"$(cat -)\"
+	ccg = !git diff --staged | node {absolute path of the clone folder}/commitgen.js "{language code}" \"$(cat -)\" | xargs git commit -m
+	ccgtest = !git diff --staged | node {absolute path of the clone folder}/commitgen.js "{language code}" \"$(cat -)\"
 	acp = !git add -A && git ccg && git push origin $1 &&:
 ```
 
