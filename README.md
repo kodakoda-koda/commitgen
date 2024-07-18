@@ -70,6 +70,6 @@ git add .
 git ccg
 ```
 
-'git ccg' automatically commit your code with comment that ChatGPT create.
-'git ccgtest' show the comment that ChatGPT create.
-'acp' is all-set of add-commit-push with ChatGPT comment.
+'git ccg' automatically commit your code with comment that AI create.
+'git ccgtest' show the comment that the AI create.
+'acp' is all-set of add-commit-push with the AI comment.
