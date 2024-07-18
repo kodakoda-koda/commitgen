@@ -28,7 +28,6 @@ echo "Commit message: '$MESSAGE'"
 
 if yes_no "Do you accept this commit message?"; then
     git commit -m "$MESSAGE"
-    echo "Accepted the commit message."
 else
     echo "Rejected the commit message."
 fi
