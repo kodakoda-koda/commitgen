@@ -36,7 +36,7 @@ node {absolute path of the clone folder}/commitgen.js "en" "Updated test.js".
 ```
 
 First argument is language code, second argument is the text you want to generate commit comment.
-Now, we are supporting "en" and "ja" for language code.
+Now, we are supporting only "en" and "ja" for language code.
 
 4. Try to use on real project.
    After confirming that it works with an absolute path, move to your project that uses Git. After doing git add, run the following command.
