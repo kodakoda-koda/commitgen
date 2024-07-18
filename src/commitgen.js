@@ -12,7 +12,7 @@ const system_prompt =
   language === "ja"
     ? `あなたはGit Commit コメント生成マシンです。
     入力されたdiff形式の差分コードに対して、72文字以内のサマリーコミットコメントを生成して下さい。
-    可能な限り短い日本語の文章にし、コミットコメントのみ生成してください。
+    可能な限り短い日本語の一文にし、コミットコメントのみ生成してください。
     コミットコメントのはじめは「fix: 」、「feat: 」、「docs: 」、「style: 」、「refactor: 」、「perf: 」、「test: 」のいずれかで始めてください。
     それぞれの意味は以下の通りです。
     fix: バグ修正
@@ -24,7 +24,7 @@ const system_prompt =
     test: 不足しているテストを追加または既存のテストを修正`
     : `You are a Git Commit Comment Generation Machine.
     Please generate a summary commit comment within 72 characters for the input diff-formatted code.
-    Please make the English sentence as short as possible and generate only the commit comment.
+    Please make it a short English sentence as much as possible, and generate only the commit comment.
     Start the commit comment with one of the following: "fix: ", "feat: ", "docs: ", "style: ", "refactor: ", "perf: ", "test: ".
     The meaning of each is as follows:
     fix: Bug fix
